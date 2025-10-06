@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Explore - Destination</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Travel Explore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navDest">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navDest">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="destination.html">Destination</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-navbar">
+
+  <!-- DESTINATION PAGE BANNER -->
+  <div class="banner" style="background-image: url('images/destanation-banner.jpg')">
+    <h1>Explore Destinations</h1>
+  </div>
+
+  <!-- SEARCH BAR OF BS -->
+  <div class="container mt-4">
+    <div class="d-flex">
+      <input id="searchInput" type="text" class="form-control" placeholder="Search Destination...">
+      <button id="searchBtn" class="btn btn-orange ms-2" type="button">🔍</button>
+    </div>
+  </div>
+
+  <!-- CRUD OPERATIONS SECTION USED IN DESTINATION.JS & CRUD.JS-->
+  <section class="container py-4">
+    <h2 class="text-center mb-3">Manage Destinations (Local CRUD)</h2>
+
+    <!-- ADD NEW DESTINATIONS AREA OF BS -->
+    <div class="row g-2 mb-3">
+      <div class="col-md-5">
+        <select id="citySelect" class="form-select">
+          <option value="" disabled selected>Select a city to add</option>
+          <option value="images/lahore.jpeg">Lahore</option>
+          <option value="images/karachi.jpg">Karachi</option>  <!-- (OPTION TAG)CHOOSES OPTION AS HTML TAG-->
+          <option value="images/islamabad.jpg">Islamabad</option>
+          <option value="images/multan.jpg">Multan</option>
+          <option value="images/faisalabad.jpg">Faisalabad</option>
+          <option value="images/quetta.jpg">Quetta</option>
+          <option value="images/muree.jpg">Muree</option>
+          <option value="images/peshawar.jpg">Peshawar</option>
+          <option value="images/gilgit.jpg">Gilgit</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <input id="customTitle" type="text" class="form-control" placeholder="Custom title (optional)">
+      </div>
+      <div class="col-md-4">
+        <button id="addBtn" class="btn btn-orange w-100">Add Destination</button>
+      </div>
+    </div>
+
+    <!-- INIT DESTINATIONLIST FOR JS -->
+    <div id="destinationList" class="row g-3"></div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Travel Explore. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- SCRIPTS PATHS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/crud.js"></script>
+
+</body>
+</html>
